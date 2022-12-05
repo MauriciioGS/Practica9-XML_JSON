@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnResJson"
+        app:layout_constraintTop_toBottomOf="@+id/searchText" />
+
+    <Button
+        android:id="@+id/btnResXml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos XML"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText" />
+
+    <Button
+        android:id="@+id/btnResJson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="datos JSON"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText" />
+
+    <Button
+        android:id="@+id/btnResJsonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="json id"
+        app:layout_constraintStart_toStartOf="@+id/btnResXml"
+        app:layout_constraintTop_toBottomOf="@+id/btnResXml" />
+
+    <Button
+        android:id="@+id/btnJsonPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="json post"
+        app:layout_constraintEnd_toEndOf="@+id/btnResJson"
+        app:layout_constraintStart_toEndOf="@+id/btnResJsonId"
+        app:layout_constraintTop_toBottomOf="@+id/btnResJson" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="json delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnJsonPost"
+        app:layout_constraintTop_toBottomOf="@+id/search" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnResJsonId">
+
+        <TextView
+            android:id="@+id/outText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
